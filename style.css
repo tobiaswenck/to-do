@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    --gray: #333333;
+    --white: #FEFEFE;
+    --primary: #FF521B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--gray);
+    color: var(--white);
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+.wrapper {
+    height: 70vh;
+    width: 80vw;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    /*outline: red solid 1px;*/
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+.wrapper-header {
+    color: var(--gray);
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.wrapper-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--gray);
+    width: 60%;
+    margin-left: 20%;
+}
+
+.wrapper-body {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    white-space: normal;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wrapper-body, textarea, li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.text-container {
+    
+    width: 80%;
+    margin: 1rem 10%; 
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.text-container textarea {
+    resize: none;
+    /*overflow-y: scroll;*/
+    border-radius: 10px;
+    width: calc(90% - 1rem);
+    height: 80%;
+    padding: 0 .5rem;
+}
+
+.text-container button {
+    padding: .5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    height: 40%;
+    width: 90%;
+    
+    position: end;
+    background-image: linear-gradient(to bottom left, #FF521B, #c9380a);
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.1s ease;
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+#add:active {
+    /* Scale down button when pressed */
+    transform: scale(0.95);
+    /* Optionally, change the background gradient to give feedback */
+    background-image: linear-gradient(to bottom left, #c9380a, #FF5733);
+  }
+
+#add:hover {
+    border: #333333 solid 1px;
+}
+
+.list-container {
+    display: flex;
+    color: var(--gray);
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: left;
+}
+
+.list-container ul {
+    list-style-type: square;
+
+}
+
+
+
